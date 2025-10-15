@@ -12,3 +12,67 @@ array_push($fruits,"Mango");
 echo $fruits[7] . "<br>";
 ?>
 
+<?php 
+$fruits = array("Avocado","Blueberry","Cherry");
+echo "I like " . $fruits[0] . ", " . $fruits[1] ." and ". $fruits[2] . ".<br>";
+
+// 3.1.1
+
+array_push($fruits,"Tomato");
+array_push($fruits,"Apple");
+array_push($fruits,"Banana");
+array_push($fruits,"Orange");
+array_push($fruits,"Mango");
+
+// 3.1.2
+
+unset($fruits[3]);
+echo $fruits[7] . "<br>";
+?>
+
+<?php 
+$fruits = array("Avocado","Blueberry","Cherry");
+// echo "I like " . $fruits[0] . ", " . $fruits[1] ." and ". $fruits[2] . ".<br>";
+
+// 3.1.1
+
+array_push($fruits,"Tomato");
+array_push($fruits,"Apple");
+array_push($fruits,"Banana");
+array_push($fruits,"Orange");
+array_push($fruits,"Mango");
+
+// echo $fruits[7] . "<br>";
+
+// 3.1.2
+
+unset($fruits[3]);
+// echo $fruits[7] . "<br>";
+
+$veggies = array("Carrot", "Potato", "Eggplant");
+foreach ($veggies as $veggie) {
+    echo $veggie ."<br>";
+}
+?>
+
+<?php 
+$fruits = array("Avocado","Blueberry","Cherry");
+$arrlength = count($fruits);
+
+for($x = 0; $x < $arrlength; $x++) {
+    echo $fruits[$x];
+    echo "<br>";
+}
+
+// 3.2.1
+
+array_push($fruits,"Tomato");
+array_push($fruits,"Apple");
+array_push($fruits,"Banana");
+array_push($fruits,"Orange");
+array_push($fruits,"Mango");
+for($x = 0; $x < count($fruits); $x++) {
+    echo $fruits[$x];
+    echo "<br>";
+}
+?>
