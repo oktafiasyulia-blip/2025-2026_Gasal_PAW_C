@@ -76,3 +76,280 @@ for($x = 0; $x < count($fruits); $x++) {
     echo "<br>";
 }
 ?>
+
+<?php 
+$fruits = array("Avocado","Blueberry","Cherry");
+$arrlength = count($fruits);
+
+for ($x = 0; $x < $arrlength; $x++) {
+    // echo $fruits[$x];
+    // echo "<br>";
+}
+
+// 3.2.1;
+
+array_push($fruits,"Tomato");
+array_push($fruits,"Apple");
+array_push($fruits,"Banana");
+array_push($fruits,"Orange");
+array_push($fruits,"Mango");
+for($x = 0; $x < count($fruits); $x++) {
+    // echo $fruits[$x];
+    // echo "<br>";
+}
+
+// 3.2.2;
+
+$veggies = array("Carrot", "Potato", "wortel");
+for($x = 0; $x < count($veggies); $x++) {
+    echo $veggies[$x] ."<br>";
+}
+?>
+
+<?php 
+$height = array("Andy"=>"176", "Barry"=>"165", "Charlie"=>"170");
+echo "Andy is " . $height["Andy"] . "cm tall";
+
+// 3.3.1
+
+$height["Aziz"] = "170";
+$height["Malik"] = "167";
+$height["fathul"] = "173";
+$height["Najwa"] = "177";
+$height["Bima"] = "153";
+echo $height["Bima"];
+?>
+
+<?php 
+$height = array("Andy"=>"176", "Barry"=>"165", "Charlie"=>"170");
+echo "Andy is " . $height["Andy"] . "cm tall<br>";
+
+// 3.3.1
+
+$height["Aziz"] = "170";
+$height["Malik"] = "167";
+$height["fathul"] = "173";
+$height["Najwa"] = "177";
+$height["Bima"] = "153";
+echo $height["Bima"]."<br>";
+
+// 3.3.2
+
+unset($height["fathul"]);
+echo $height["Bima"];
+?>
+
+<?php 
+$height = array("Andy"=>"176", "Barry"=>"165", "Charlie"=>"170");
+echo "Andy is " . $height["Andy"] . "cm tall<br>";
+
+// 3.3.1
+
+$height["Aziz"] = "170";
+$height["Lana"] = "167";
+$height["fathul"] = "173";
+$height["najwa"] = "177";
+$height["Bima"] = "153";
+echo $height["Bima"]."<br>";
+
+// 3.3.2
+
+unset($height["fathul"]);
+echo $height["Bima"]."<br>";
+
+// 3.3.3
+
+$weight = array("aziz"=> "60","Lana"=> "55","fathul"=> "57");
+echo $weight["Lana"]."<br>";
+?>
+
+<?php 
+$height = array("Andy"=>"176", "Barry"=>"165", "Charlie"=>"170");
+
+foreach ($height as $x => $x_value) {
+    echo "key=" . $x . ", Value=" . $x_value;
+    echo "<br>";
+}
+
+// 3.4.1
+
+$height["aziz"] = "170";
+$height["Lana"] = "167";
+$height["fathul"] = "173";
+$height["najwa"] = "177";
+$height["Bima"] = "153";
+foreach ($height as $x => $x_value) {
+    echo "key=" . $x . ", Value=" . $x_value;
+    echo "<br>";
+}
+?>
+
+<?php 
+$height = array("Andy"=>"176", "Barry"=>"165", "Charlie"=>"170");
+
+foreach ($height as $x => $x_value) {
+    // echo "key=" . $x . ", Value=" . $x_value;
+    // echo "<br>";
+}
+
+// 3.4.1
+
+$height["aziz"] = "170";
+$height["Lana"] = "167";
+$height["fathul"] = "173";
+$height["najwa"] = "177";
+$height["Bima"] = "153";
+foreach ($height as $x => $x_value) {
+    echo "key=" . $x . ", Value=" . $x_value;
+    echo "<br>";
+}
+
+// 3.4.2
+
+$weight = array("aziz"=> "60","Lana"=> "55","fathul"=> "57");
+foreach ($weight as $x => $x_value) {
+    // echo "key=" . $x . ", Value=" . $x_value;
+    // echo "<br>";
+}
+?>
+
+<?php 
+$students = array(
+    array("Alex", "220401", "0812345678"),
+    array("Bianca", "220402", "0812345687"),
+    array("Candiee", "220403", "0812345665"),
+
+// 3.5.1
+
+    array("aziz", "220404", "0812345666"),
+    array("Lana", "220405", "0812345554"),
+    array("fathul", "220406", "0812345545"),
+    array("najwa", "220407", "0812345445"),
+    array("Bima", "220408", "0812345444")
+);
+
+for($row = 0; $row < 8; $row++) {
+    echo "<p><b>Row number $row</b></p>";
+    echo "<ul>";
+    for($col = 0; $col < 3; $col++) {
+        echo "<li>".$students[$row][$col]."</li>";
+    }
+    echo "</ul>";
+}
+?>
+
+<?php 
+$students = array(
+    array("Alex", "220401", "0812345678"),
+    array("Bianca", "220402", "0812345687"),
+    array("Candiee", "220403", "0812345665"),
+
+// 3.5.1
+
+    array("aziz", "220404", "0812345666"),
+    array("Lana", "220405", "0812345554"),
+    array("fathul", "220406", "0812345545"),
+    array("najwa", "220407", "0812345445"),
+    array("Bima", "220408", "0812345444")
+);
+
+for($row = 0; $row < 8; $row++) {
+    // echo "<p><b>Row number $row</b></p>";
+    echo "<ul>";
+    for($col = 0; $col < 3; $col++) {
+        // echo "<li>".$students[$row][$col]."</li>";
+    }
+    echo "</ul>";
+}
+
+// 3.5.2
+
+echo "<table border='1' cellpadding='5' cellspacing='0'>";
+    echo "<tr>";
+        echo "<th>Name</th>";
+        echo "<th>NIM</th>";
+        echo "<th>Mobile</th>";
+    echo "</tr>";
+for($row = 0; $row < count($students); $row++) {
+    echo "<tr>";
+    for($col = 0; $col < count($students[0]); $col++) {
+        echo "<td>".$students[$row][$col]."</td>";
+    }
+    echo "</tr>";
+}
+echo "</table>";
+?>
+
+<?php 
+$fruits = array("Avocado","Blueberry","Cherry");
+array_push($fruits,"Apple");
+print_r($fruits);
+?>
+
+<?php 
+$fruits = array("Avocado","Blueberry","Cherry");
+$addition = array("Apple", "Watermelon", "Cherry");
+print_r(array_merge($fruits, $addition));
+?>
+
+<?php 
+$identity = array("nama"=>"aziz", "umur"=>19, "alamat"=>"sampang");
+print_r(array_values($identity));
+?>
+<?php 
+$fruits = array("Avocado","Blueberry","Cherry");
+var_dump(array_search("Avocado", $fruits));
+?>
+
+<?php
+function ganjil($angka) {
+    return $angka % 2 === 0;
+}
+$angka = array(1,3,2,3,4,5,8,7,5,5,6);
+var_dump(array_filter($angka, "ganjil"));
+?>
+
+<?php
+$nama1 = array("fathul", "reli", "aziz");
+sort($nama1);
+echo "Method sort : <br>";
+for($i = 0; $i < count($nama1); $i++) {
+    echo $nama1[$i]."<br>";
+}
+echo "<br>";
+$nama2 = array("fathul", "reli", "aziz");
+rsort($nama2);
+echo "Method lsort : <br>";
+for($i = 0; $i < count($nama2); $i++) {
+    echo $nama2[$i]."<br>";
+}
+echo "<br>";
+$nama3 = array("depan"=>"fathul", "tengah"=>"reli", "belakang"=>"aziz");
+asort($nama3);
+echo "Method asort : <br>";
+foreach($nama3 as $k => $v) {
+    echo "key = ".$k.", value = ".$v."<br>";
+}
+echo "<br>";
+$nama4 = array("depan"=>"fathul", "tengah"=>"reli", "belakang"=>"aziz");
+ksort($nama4);
+echo "Method ksort : <br>";
+foreach($nama4 as $k => $v) {
+    echo "key = ".$k.", value = ".$v."<br>";
+}
+echo "<br>";
+$nama5 = array("depan"=>"fathul", "tengah"=>"reli", "belakang"=>"aziz");
+arsort($nama5);
+echo "Method arsort : <br>";
+foreach($nama5 as $k => $v) {
+    echo "key = ".$k.", value = ".$v."<br>";
+}
+echo "<br>";
+$nama6 = array("depan"=>"fathul", "tengah"=>"reli", "belakang"=>"aziz");
+arsort($nama6);
+echo "Method krsort : <br>";
+foreach($nama6 as $k => $v) {
+    echo "key = ".$k.", value = ".$v."<br>";
+}
+?>
+
